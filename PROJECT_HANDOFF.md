@@ -97,7 +97,6 @@ No payment credentials or secrets are stored in this project. Do not commit `.en
 - Add post scheduling, pinned posts, image upload through managed storage, and a member-only post query that enforces VIP access on the server.
 - Add CSRF, rate limiting, audit logging and security headers at production hardening time.
 
-
 ## Payment and deposit-review phase
 
 The payment flow is intentionally **deposit-only**. The configured beneficiary is `MD EJAN CHOWDHURY`. The currently configured methods are bKash `01863211541`, Nagad `01863211541`, and MyBank account `514012122490`. These values are centralized in `shared/paymentConfig.ts` and should be replaced there if the owner changes them.
@@ -112,13 +111,11 @@ The main files for this phase are `client/src/pages/Deposit.tsx`, `client/src/pa
 
 Before production use, confirm the payment provider/account ownership, legal and regulatory requirements for the jurisdiction, VIP entitlement duration after approval, refund/chargeback policy, notification fallback channel, and whether a real payment gateway/webhook should replace manual review. Do not put bank credentials, API keys, or secrets into the repository.
 
-
 ## Latest auth and banner update
 
 Dedicated routes now exist for `/login`, `/signup`, and `/forgot-password`. These screens intentionally route to the connected secure authentication provider instead of collecting a password in this website UI. The main header now exposes visible Log in and Sign up links. Forgot password opens the provider recovery flow.
 
 The supplied wide banner image is uploaded to managed storage at `/manus-storage/hk-pools-feature-banner_eb02e858.png` and is rendered as the final feature block immediately above the footer on the public home page. The original source was kept outside the project in `/home/ubuntu/webdev-static-assets/hk-pools-feature-banner.png`.
-
 
 ## Final platform expansion
 
@@ -144,7 +141,6 @@ A developer or AI builder can continue from the database schema, generated migra
 
 TypeScript check passed. Unit tests passed: 11 tests across 5 test files. Production build passed. Visual screenshots verified the public landing page, authenticated member overview, full admin module matrix and login screen. The public preview retains the supplied bottom banner and the original social/contact details.
 
-
 ## Published prediction update — September 25, 2026
 
 A public `free` daily post was published for **Grand Dragon & 9 Lotto** with post date `2026-09-25`, title **Tomorrow Prediction — Grand Dragon & 9 Lotto**, numbers `5410 | 2450 | 8154`, the supplied prediction image at `/manus-storage/grand-dragon-9lotto-2026-09-25_65b19ef6.png`, and an informational-only disclaimer. The `daily_posts` table now has a nullable `mediaUrl` field via migration `drizzle/0005_first_dreaming_celestial.sql`; the public feed renders the image and the admin editor accepts a managed-storage image URL.
@@ -153,11 +149,9 @@ A public `free` daily post was published for **Grand Dragon & 9 Lotto** with pos
 
 The current deliverable is a responsive full-stack website and can be opened on Android browsers. An APK cannot be installed directly from this chat or silently installed onto a phone. To distribute an APK, create a separate Android wrapper build around the published web app (for example, a Capacitor/WebView or Expo app), sign it with an Android keystore, then provide the APK for the owner to download and install manually. Do not send Gmail passwords or keystore secrets in chat.
 
-
 ## Instagram contact update
 
 The public Instagram contact is now **@4d6dmktshe** with profile link `https://www.instagram.com/4d6dmktshe/`. The shared configuration, public social/contact section and regression test have been updated; all 11 tests and the production build pass.
-
 
 ## Android wrapper configuration
 
@@ -167,13 +161,11 @@ A ready-to-build `android-wrapper/` folder now contains `capacitor.config.ts`, `
 
 Final HTTP checks returned 200 for the supplied Facebook and Telegram URLs, and WhatsApp returned 200 after redirecting to its official send endpoint. The verified values are stored in `shared/siteConfig.ts`.
 
-
 ## Final privacy and API hardening
 
 The server now sends security headers including `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, strict referrer policy, restricted permissions policy, disabled `X-Powered-By`, and `Cache-Control: no-store` for API responses. Public queries are limited to free published daily posts, public social posts, public profiles and public groups. VIP posts, member-only posts, private profiles/groups, deposits, wallet records, memberships, notifications, messages and admin data require the appropriate authenticated or role-protected procedure. Anonymous membership and wallet access tests now pass.
 
 The website does not serve the source tree, backend files or configuration files as public assets. The source-complete ZIP is a private handoff artifact only; do not upload it to `client/public/` or expose it through the deployed website. The ZIP excludes secrets, `.env`, passwords, session data, keystores, internal runtime metadata, `node_modules` and build output.
-
 
 ## Owner/Admin security implementation
 

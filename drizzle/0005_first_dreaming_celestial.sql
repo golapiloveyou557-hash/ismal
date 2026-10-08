@@ -1,0 +1,1 @@
+ALTER TABLE `daily_posts` ADD `mediaUrl` varchar(500);
