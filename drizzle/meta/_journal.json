@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1790184001270,
+      "tag": "0000_grey_bucky",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1790184527204,
+      "tag": "0001_tough_psynapse",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1790185474359,
+      "tag": "0002_bored_omega_red",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1790185809849,
+      "tag": "0003_free_warpath",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1790186665742,
+      "tag": "0004_spicy_mimic",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1790188175169,
+      "tag": "0005_first_dreaming_celestial",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1790196938094,
+      "tag": "0006_magenta_star_brand",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `deposits` ADD CONSTRAINT `deposits_transaction_id_unique` UNIQUE(`transactionId`);
